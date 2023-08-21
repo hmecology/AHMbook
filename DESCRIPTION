@@ -1,22 +1,22 @@
 Package: AHMbook
 Type: Package
 Title: Functions and Data for the Book 'Applied Hierarchical Modeling in Ecology' Vols 1 and 2
-Version: 0.2.8
-Date: 2022-12-01
+Version: 0.2.9
+Date: 2023-08-21
 Depends: R (>= 2.10)
 Imports: grDevices, graphics, methods, stats, utils, plotrix, raster, sp, fields, coda, unmarked (>= 0.12.2), mvtnorm, spdep
 Suggests: RandomFields
 Authors@R: c(
-  person("Andy", "Royle", role=c("aut", "cre"), email="aroyle@usgs.gov"),
   person("Marc", "Kéry", role="aut"),
+  person("Andy", "Royle", role="aut"),
   person("Mike", "Meredith", role="aut"),
+  person("Ken", "Kellner", role=c("ctb", "cre"), email="contact@kenkellner.com", comment="simIDS"),
   person("Urs", "Breitenmoser", role="dtc", comment="EurasianLynx"),
   person("Richard", "Chandler", role="ctb"),
   person("Bob", "Dorazio", role="ctb"),
   person("Evan", "Grant", role="dtc", comment="duskySalamanders"),
   person("John-Andren", "Henden", role="dtc", comment="Finnmark"),
   person("Roland", "Kays", role="dtc", comment="MesoCarnivores"),
-  person("Ken", "Kellner", role="ctb", comment="simIDS"),
   person("David", "King", role="dtc", comment="cswa"),
   person("Xavier", "Lambin", role="dtc", comment="waterVoles"),
   person("Jeremy", "Mizel", role=c("ctb", "dtc"), comment="treeSparrow"),
@@ -52,5 +52,6 @@ License: GPL (>=3)
 Copyright: file COPYRIGHTS
 NeedsCompilation: no
 URL: https://sites.google.com/site/appliedhierarchicalmodeling/home
+BugReports: https://github.com/kenkellner/AHMbook/issues
 Encoding: UTF-8
 Language: en-US
