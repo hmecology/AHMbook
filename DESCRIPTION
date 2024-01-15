@@ -4,8 +4,8 @@ Title: Functions and Data for the Book 'Applied Hierarchical Modeling in Ecology
 Version: 0.2.11
 Date: 2024-01-14
 Depends: R (>= 2.10)
-Imports: grDevices, graphics, methods, stats, utils, coda, unmarked (>= 0.12.2), mvtnorm
-Suggests: fields, raster, sp, spdep
+Imports: grDevices, graphics, methods, stats, utils, unmarked (>= 0.12.2), mvtnorm
+Suggests: coda, fields, raster, sp, spdep
 Authors@R: c(
   person("Marc", "Kéry", role="aut"),
   person("Andy", "Royle", role="aut"),

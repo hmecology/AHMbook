@@ -20,7 +20,7 @@ importFrom("unmarked", "unmarkedFrameOccu", "unmarkedFramePCount", "unmarkedFram
 # importFrom("RandomFields", "RFoptions", "RFsimulate", "RMexp")
 #importFrom("fields",  "circulantEmbeddingSetup", "circulantEmbedding")
 #importFrom("sp", "bubble", "coordinates<-")
-importFrom("coda", "crosscorr")
+#importFrom("coda", "crosscorr")
 importFrom("mvtnorm", "dmvnorm")
 
 
