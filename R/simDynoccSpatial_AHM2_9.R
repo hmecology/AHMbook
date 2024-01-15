@@ -103,8 +103,10 @@ simDynoccSpatial <- function(side = 50, nyears = 10, nsurveys = 3,
 
   if(FALSE) {x <- NULL; rm(x)}  # Stops R CMD check choking on 'curve'.
   
-  # Load raster package------------------------------------------
+  # Load required packages --------------------------------------
   checkNamespace("raster")
+  checkNamespace("fields")
+  checkNamespace("spdep")
 
   # Checks and fixes for input data -----------------------------
   side <- round(side[1])
@@ -167,8 +169,8 @@ simDynoccSpatial <- function(side = 50, nyears = 10, nsurveys = 3,
     message("Using package 'fields' instead of 'RandomFields'; see help(simDynoccSpatial).")
     if(!is.na(seed.XAC))
       set.seed(seed.XAC)
-    obj <- circulantEmbeddingSetup(grid=list(x=xcoord, y=ycoord), Covariance="Exponential", aRange=theta.XAC)
-    tmp <- try(circulantEmbedding(obj), silent=TRUE)
+    obj <- fields::circulantEmbeddingSetup(grid=list(x=xcoord, y=ycoord), Covariance="Exponential", aRange=theta.XAC)
+    tmp <- try(fields::circulantEmbedding(obj), silent=TRUE)
     if(inherits(tmp, "try-error"))
       stop("Simulation of random field failed.\nTry with smaller values for 'side' or 'theta.XAC'.")
     XAC <- matrix(tmp, ncol = side, byrow = TRUE)

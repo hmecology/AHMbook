@@ -30,8 +30,9 @@ simExpCorrRF <- function(variance = 1, theta = 1, size = 50, seed = NA, show.plo
 # show.plot: if TRUE, plots of the data will be displayed;
 #  set to FALSE if you are running simulations or use inside of other fct's.
 
-# Load raster package
+# Load required packages
 checkNamespace("raster")
+checkNamespace("fields")
 
 # Generate correlated random variables in a square
 step <- 1
@@ -50,8 +51,8 @@ grid <- cbind(x = rep(x, each=size), y = y)
  message("Using package 'fields' instead of 'RandomFields'; see help(simExpCorrRF).")
   if(!is.na(seed))
     set.seed(seed)  # Only for compatibility with RandomFields, better to set seed before calling simExpCommRF
-  obj <- circulantEmbeddingSetup(grid=list(x=x, y=y), Covariance="Exponential", aRange=theta)
-  tmp <- try(circulantEmbedding(obj), silent=TRUE)
+  obj <- fields::circulantEmbeddingSetup(grid=list(x=x, y=y), Covariance="Exponential", aRange=theta)
+  tmp <- try(fields::circulantEmbedding(obj), silent=TRUE)
   if(inherits(tmp, "try-error"))
     stop("Simulation of random field failed.\nTry with smaller values for 'size' or 'theta'.")
   field <- as.vector(tmp * sqrt(variance))

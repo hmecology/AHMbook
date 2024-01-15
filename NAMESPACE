@@ -18,8 +18,8 @@ importFrom("unmarked", "unmarkedFrameOccu", "unmarkedFramePCount", "unmarkedFram
           "occuRN", "bup", "ranef", "coef", "fitted", "residuals", "vcov", "confint")
 # importFrom("plotrix", "draw.circle") # Now in file draw_circle.R
 # importFrom("RandomFields", "RFoptions", "RFsimulate", "RMexp")
-importFrom("fields",  "circulantEmbeddingSetup", "circulantEmbedding")
-importFrom("sp", "bubble", "coordinates<-")
+#importFrom("fields",  "circulantEmbeddingSetup", "circulantEmbedding")
+#importFrom("sp", "bubble", "coordinates<-")
 importFrom("coda", "crosscorr")
 importFrom("mvtnorm", "dmvnorm")
 

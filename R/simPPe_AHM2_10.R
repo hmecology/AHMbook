@@ -33,8 +33,9 @@ simPPe <- function(lscape.size = 150, buffer.width = 25, variance.X = 1, theta.X
   #    (this is the parameter of the gridding process
   #    and determines the size of the quadrats)
 
-  # -------------- Load raster package -----------------------
+  # -------------- Load required packages --------------------
   checkNamespace("raster")
+  checkNamespace("fields")
 
   # -------------- Check and fix input -----------------------
   buffer.width <- round(buffer.width[1])
@@ -84,8 +85,8 @@ simPPe <- function(lscape.size = 150, buffer.width = 25, variance.X = 1, theta.X
   #    x=x, y=y, grid=TRUE)@data$variable1, ncol = lscape.size) # MVN r.v. with spatial correlation
   #} else {
     message("Using package 'fields' instead of 'RandomFields'; see help(simPPe).")
-    obj <- circulantEmbeddingSetup(grid=list(x=x, y=y), Covariance="Exponential", aRange=theta.X)
-    tmp <- try(circulantEmbedding(obj), silent=TRUE)
+    obj <- fields::circulantEmbeddingSetup(grid=list(x=x, y=y), Covariance="Exponential", aRange=theta.X)
+    tmp <- try(fields::circulantEmbedding(obj), silent=TRUE)
     if(inherits(tmp, "try-error"))
       stop("Simulation of random field failed.\nTry with smaller values for 'lscape.size' or 'theta.X'.")
     field <- matrix(tmp * sqrt(variance.X), ncol = lscape.size)
