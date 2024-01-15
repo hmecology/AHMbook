@@ -16,9 +16,6 @@ importFrom("utils", "head", "stack", "packageVersion", "data")
 
 importFrom("unmarked", "unmarkedFrameOccu", "unmarkedFramePCount", "unmarkedFrameDS",
           "occuRN", "bup", "ranef", "coef", "fitted", "residuals", "vcov", "confint")
-importFrom("raster", "raster", "extent", "extent<-", "rasterFromXYZ",
-          "getValues", "image", "addLayer",  "dropLayer", "ncell",
-          "values",  "values<-", "xyFromCell", "aggregate", "subset")
 # importFrom("plotrix", "draw.circle") # Now in file draw_circle.R
 # importFrom("RandomFields", "RFoptions", "RFsimulate", "RMexp")
 importFrom("fields",  "circulantEmbeddingSetup", "circulantEmbedding")

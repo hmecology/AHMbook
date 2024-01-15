@@ -30,6 +30,9 @@ simExpCorrRF <- function(variance = 1, theta = 1, size = 50, seed = NA, show.plo
 # show.plot: if TRUE, plots of the data will be displayed;
 #  set to FALSE if you are running simulations or use inside of other fct's.
 
+# Load raster package
+checkNamespace("raster")
+
 # Generate correlated random variables in a square
 step <- 1
 x <- seq(1, size, step)
@@ -67,7 +70,7 @@ if(show.plots){
     # Random field
     # image(x, y, field,col=topo.colors(20), main = paste("Gaussian random field with \n negative exponential correlation (theta =", theta, ")"), cex.main = 1)
     par(mar = c(3,2,5,1))
-    raster::plot(rasterFromXYZ(cbind(grid, field)), col=topo.colors(20),
+    raster::plot(raster::rasterFromXYZ(cbind(grid, field)), col=topo.colors(20),
     main = paste("Gaussian random field with \n negative exponential correlation (theta =", theta, ")"), cex.main = 1, legend=FALSE, box=FALSE)
     box()
   }, silent = TRUE)
