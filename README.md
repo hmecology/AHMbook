@@ -2,7 +2,7 @@ AHMbook
 =======
 
 [![R build
-status](https://github.com/kenkellner/AHMbook/workflows/R-CMD-check/badge.svg)](https://github.com/kenkellner/AHMbook/actions)
+status](https://github.com/hmecology/AHMbook/workflows/R-CMD-check/badge.svg)](https://github.com/hmecology/AHMbook/actions)
 [![CRAN status](https://www.r-pkg.org/badges/version/AHMbook)](https://cran.r-project.org/web/packages/AHMbook/index.html)
 [![Downloads](https://cranlogs.r-pkg.org/badges/last-month/AHMbook)](https://www.r-pkg.org/services)
 
